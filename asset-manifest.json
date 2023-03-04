@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/percenthelper/static/css/main.02e7516f.css",
+    "main.js": "/percenthelper/static/js/main.6b963f34.js",
+    "static/js/787.6a2e93b7.chunk.js": "/percenthelper/static/js/787.6a2e93b7.chunk.js",
+    "index.html": "/percenthelper/index.html",
+    "main.02e7516f.css.map": "/percenthelper/static/css/main.02e7516f.css.map",
+    "main.6b963f34.js.map": "/percenthelper/static/js/main.6b963f34.js.map",
+    "787.6a2e93b7.chunk.js.map": "/percenthelper/static/js/787.6a2e93b7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.02e7516f.css",
+    "static/js/main.6b963f34.js"
+  ]
+}
