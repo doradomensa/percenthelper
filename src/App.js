@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './App.scss';
+import PercentText from './components/PercentText';
 
-function App() {
+class App extends React.Component {
+  constructor(props){
+    super(props);
+    this.state={
+      money:0
+    }
+  }
+  render(){
+
+  const percentsComponents=[]
+  for(var i=0.95;i<1.05;i=i+0.01){
+    percentsComponents.push(<PercentText amount={this.state.money} percent={i}/>);
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='row approw'>
+      <div className='col-md-4'></div>
+      <div className='col-md-4 mainscreen border-gradient-purple'>
+        <div style={{display: 'flex', 'justifyContent': 'space-between'}}>
+        <div className='alignedCenter'>
+          Enter value:<br/>
+        <input name="money" type='number'  onChange={e => this.setState({money:e.target.value})}/>
+        </div>
+        <table>
+          <tr>{percentsComponents}</tr>
+        
+        </table>
+        </div>
+      </div>
+      <div className='col-md-4'></div>
+      </div>
     </div>
   );
+  }
 }
 
 export default App;
